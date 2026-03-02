@@ -1,0 +1,22 @@
+services:
+  mysql:
+    image: mysql:9.1.0
+    container_name: sanremo_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: pluto
+      MYSQL_DATABASE: sanremo
+    ports:
+      - 3305:3306
+    volumes:
+      - piattaforma_sanremo_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: sanremo_phpmyadmin
+    ports:
+      - 8094:80
+    environment:
+      - PMA_ARBITRARY=1
+
+volumes:
+  piattaforma_sanremo_data:
