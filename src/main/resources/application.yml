@@ -4,7 +4,7 @@ spring:
   application:
     name: PiattaformaSanremo
   datasource:
-    url: jdbc:mysql://localhost:3305/piattaforma_sanremo
+    url: jdbc:mysql://localhost:3305/sanremo
     username: root
     password: pluto
     driver-class-name: com.mysql.cj.jdbc.Driver
